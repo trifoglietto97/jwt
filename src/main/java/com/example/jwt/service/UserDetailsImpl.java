@@ -20,7 +20,6 @@ public class UserDetailsImpl implements UserDetails {
 
     private String username;
 
-    private String email;
 
     @JsonIgnore
     private String password;
@@ -31,7 +30,6 @@ public class UserDetailsImpl implements UserDetails {
                            Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.username = username;
-        this.email = email;
         this.password = password;
         this.authorities = authorities;
     }
