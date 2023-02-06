@@ -1,15 +1,14 @@
 package com.example.jwt.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+
 @Entity
 public class Role {
+
+    public Role(){}
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,4 +17,19 @@ public class Role {
     private ERole name;
 
 
+    public ERole getName() {
+        return name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(ERole name) {
+        this.name = name;
+    }
 }
